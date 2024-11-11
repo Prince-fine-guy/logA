@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat";
+  line-height: 1.6;
+  color: white;
+}
+
+.container {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 64, 50, 0.8),
+      rgba(71, 17, 116, 0.9)
+    ),
+    url(../myProj/background.jpg) no-repeat center/cover;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+li .nav-item {
+  color: white;
+  display: flex;
+  gap: 7px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.nav-bar a:link,
+.nav-bar a:visited {
+  color: white;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.description-box {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  /* background-color: yellow; */
+  gap: 40px;
+  align-items: center;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.input-form {
+  flex: 1;
+}
+
+.description-text {
+  flex: 1;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 7px;
+  outline: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:focus,
+textarea:focus {
+  outline: solid 1px white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+  padding-bottom: 50px;
+}
+
+.form-group .btn {
+  background-color: rgb(216, 58, 0);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.form-group .btn:hover {
+  background-color: rgb(252, 70, 4);
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+/* MEDIA  */
+
+@media (max-width: 804px) {
+  .description-box {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .description-box h1,
+  p {
+    text-align: center;
+  }
+  .description-box p {
+    font-size: 18px;
+  }
+  .input-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 629px) {
+  .header,
+  .nav-bar {
+    flex-direction: column;
+  }
+  .nav-bar {
+    gap: 15px;
+  }
+}
